@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Pembebasan Warga Binaan Pemasyarakatan (WBP)</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Kalkulator Pembebasan Warga Binaan Pemasyarakatan (WBP)</h1>
+    <p>Masukkan data Warga Binaan Pemasyarakatan (WBP) untuk menghitung tanggal pembebasan.</p>
+    
+    <div class="input-group">
+      <label for="name">Nama Lengkap Warga Binaan Pemasyarakatan (WBP):</label>
+      <input type="text" id="name" required>
+    </div>
+
+    <div class="input-group">
+      <label for="lapas">Nama Lapas/Rutan:</label>
+      <input type="text" id="lapas" required>
+    </div>
+
+    <div class="input-group">
+      <label for="startDate">Tanggal Mulai Ditahan:</label>
+      <input type="date" id="startDate" required>
+    </div>
+
+    <div class="input-group">
+      <label for="years">Masa Pidana Pokok (Tahun):</label>
+      <input type="number" id="years" min="0" required>
+      <p class="note">Tuliskan angka <span class="red">0</span> jika tidak ada masa pidana pokok.</p>
+    </div>
+
+    <div class="input-group">
+      <label for="months">Masa Pidana Pokok (Bulan):</label>
+      <input type="number" id="months" min="0" max="11" required>
+      <p class="note">Tuliskan angka <span class="red">0</span> jika tidak ada masa pidana pokok.</p>
+    </div>
+
+    <div class="input-group">
+      <label for="subsiderYears">Masa Pidana Subsider (Tahun, opsional):</label>
+      <input type="number" id="subsiderYears" min="0">
+      <p class="note">Tuliskan angka <span class="red">0</span> jika tidak ada masa pidana subsider.</p>
+    </div>
+
+    <div class="input-group">
+      <label for="subsiderMonths">Masa Pidana Subsider (Bulan, opsional):</label>
+      <input type="number" id="subsiderMonths" min="0" max="11">
+      <p class="note">Tuliskan angka <span class="red">0</span> jika tidak ada masa pidana subsider.</p>
+    </div>
+
+    <div class="input-group">
+      <label for="remisi17Agustus">Jumlah Kali Melewati 17 Agustus:</label>
+      <input type="number" id="remisi17Agustus" min="0" required>
+      <p class="note">Tuliskan angka <span class="red">0</span> jika belum pernah melewati 17 Agustus.</p>
+    </div>
+
+    <div class="input-group">
+      <label for="remisiKeagamaan">Jumlah Kali Melewati Hari Keagamaan:</label>
+      <input type="number" id="remisiKeagamaan" min="0" required>
+      <p class="note">Tuliskan angka <span class="red">0</span> jika belum pernah melewati hari keagamaan.</p>
+    </div>
+
+    <div class="input-group">
+      <label for="remisiDasawarsa">Apakah Anda sudah mendapatkan Remisi Dasawarsa?</label>
+      <select id="remisiDasawarsa" required>
+        <option value="ya">Ya</option>
+        <option value="tidak">Tidak</option>
+      </select>
+    </div>
+
+    <button id="calculateBtn">Hitung Tanggal Pembebasan</button>
+
+    <div id="result" class="result">
+      <!-- Hasil perhitungan akan ditampilkan di sini -->
+    </div>
+
+    <footer>
+      <p>Copyright &copy; <span id="currentYear"></span> Ray Dharma & Selpiana Sutisna</p>
+    </footer>
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
